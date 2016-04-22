@@ -17,10 +17,10 @@ function getQueryVariable(variable) {
     console.log('Query variable %s not found', variable);
 }
 var random = Math.round((Math.random()*(1000-500)+500)/100)*100;
-var channel = getQueryVariable('channel');
+var user = getQueryVariable('user');
 var donation = getQueryVariable('donation');
 var marks = random * donation;
-document.write(marks);
+document.write("!marks add" + user + marks);
 </script>
 
 </body>
