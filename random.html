@@ -1,1 +1,16 @@
-Hello World!
+<html>
+  <body>
+    <script>
+      //open a new window
+//"newWindow" is your reference to it
+var newWindow = window.open();
+
+//"newWindow.document.body" is the body of the new window
+var newWindowBody = newWindow.document.body
+
+//let's test by adding a text node to it
+var text = document.createTextNode('foo');
+newWindowBody.appendChild(text);​
+    </script>
+  </body>
+</html>
