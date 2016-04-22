@@ -5,8 +5,6 @@
 <p id="demo"></p>
 
 <script>
-var x = Math.floor((Math.random() * 10) + 1);
-document.write(x);
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -18,8 +16,11 @@ function getQueryVariable(variable) {
     }
     console.log('Query variable %s not found', variable);
 }
-document.write(getQueryVariable('channel'));
-document.write(getQueryVariable('d'));
+var random = Math.round((Math.random()*(1000-500)+500)/100)*100;
+var channel = getQueryVariable('channel');
+var donation = getQueryVariable('donation');
+var marks = random * donation;
+document.write(marks);
 </script>
 
 </body>
